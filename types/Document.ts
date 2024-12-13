@@ -5,4 +5,6 @@ export interface Document {
 	pages: string[];
 	// 根据transformer的升级，version是转换时的transformer版本
 	version: number;
+	// 缩略图
+	thumbnail?: string;
 }
