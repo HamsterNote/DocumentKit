@@ -7,6 +7,7 @@ export interface Page {
 	width: number;
 	texts: Text[];
 	style?: CSSProperties;
-	pageIndex?: number
-	pageNumber?: number
+	pageIndex?: number;
+	pageNumber?: number;
+	lang: string | null;
 }
