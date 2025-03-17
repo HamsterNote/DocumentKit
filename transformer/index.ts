@@ -6,6 +6,7 @@ export abstract class DocumentTransformer {
 	abstract read(file: File): Promise<void>;
 	abstract getDocument(): Promise<Document | undefined>;
 	abstract getPage(page: number): Promise<Page | undefined>;
+	abstract getPageViewport(page: number): Promise<{ width: number, height: number } | undefined>;
 	abstract getCover(): Promise<string | undefined>;
 	// 后缀名
 	static extension: string;

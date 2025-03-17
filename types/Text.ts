@@ -14,8 +14,8 @@ export interface Text {
 	height: number;
 	width: number;
 	position: {
-		x: number;
-		y: number;
+		x: number | string;
+		y: number | string;
 	};
 	style?: CSSProperties;
 	lang: string | null;
