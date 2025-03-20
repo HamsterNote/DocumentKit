@@ -1,13 +1,9 @@
-import { Document } from '@DocumentKit/types/Document';
-import { Page } from '@DocumentKit/types/Page';
+import HamsterDocument from '@DocumentKit/Document';
 
 export abstract class DocumentTransformer {
 	constructor(protected hash: string) {}
-	abstract read(file: File): Promise<void>;
-	abstract getDocument(): Promise<Document | undefined>;
-	abstract getPage(page: number): Promise<Page | undefined>;
-	abstract getPageViewport(page: number): Promise<{ width: number, height: number } | undefined>;
-	abstract getCover(): Promise<string | undefined>;
+	abstract loadFile(file: File): Promise<void>;
+	abstract getDocument(): HamsterDocument | undefined;
 	// 后缀名
 	static extension: string;
 	// 版本号

@@ -19,6 +19,7 @@ export type DocumentAnchor = DocumentAnchorWithPosition | DocumentAnchorWithText
 
 export interface Document {
 	id: string;
+	// pageId列表
 	pages: string[];
 	// 根据transformer的升级，version是转换时的transformer版本
 	version: number;
