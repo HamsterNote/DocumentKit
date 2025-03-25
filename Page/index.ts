@@ -7,5 +7,5 @@ export default abstract class HamsterPage {
 	// 渲染上层文字
 	abstract getTextLayer(params: { scale: number }): Promise<HTMLDivElement>;
 	// 获取视图信息
-	abstract getViewport(params: { scale: number }): Promise<{ width: number, height: number } | undefined>;
+	abstract getViewport(params: { scale: number }): { width: number, height: number } | undefined;
 }
